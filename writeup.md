@@ -30,17 +30,24 @@ The password for the login page is partially generated at runtime using a functi
 In this case like suggested by the hint the password format is THM{.....}
 So let's search in the memory if there are any reference to "THM{"
 And yes! we found it in memory:
+
 ![pic1](pic1.png)
-Searching for direct references you will find where it is used in the code, you can change the labels on the instructions to help yourself solving the puzzle.
+
+Searching for direct references you will find where it is used in the code, you can change the labels on the
+instructions to help yourself solving the puzzle.
+
 ![pic2](pic2.png)
+
 You can see that after loading the "THM{" string in the buffer a function is called which takes as arguments the number 7 and the buffer.
 I've labeled this function FIBONACCI, let's see why:
+
 ![pic3](pic3.png)
 
 Like shown in picture the function executes a loop (LAB_400d0c79) that fills an array summing a number with the preceding one (400d0c82),
 the constructed array is pratically a Fibonacci series.
 
 The next loop (LAB_400d0c92) writes the Fibonacci series in the buffer
+
 ![pic4](pic4.png)
 
 After the Fibonacci function returns, a "}" is added to the buffer to end the password string

@@ -7,6 +7,7 @@ it is based on Xtensa Tensilica with its own instruction set.
 Xtensa is not natively supported by Ghidra or IDA, but there are several plugin out there that can be used:
 
 https://github.com/Ebiroll/ghidra-xtensa
+
 https://github.com/Ebiroll/esp32_flash_loader
 
 The first project adds Xtensa processor to Ghidra, the second allows a flash dump to be parsed/analyzed by Ghidra
